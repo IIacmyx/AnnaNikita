@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Никита & Анна — Приглашение на свадьбу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Сообщение для десктопа -->
+    <div class="desktop-message">
+        <div class="desktop-message-content">
+            <h1>Никита & Анна</h1>
+            <p>Пожалуйста, откройте это приглашение на мобильном устройстве или планшете</p>
+            <p class="desktop-subtitle">Для лучшего опыта просмотра</p>
+        </div>
+    </div>
+
+    <!-- Фоновое фото -->
+    <div class="bg-image"></div>
+    
+    <!-- Мобильный контент -->
+    <div class="mobile-content">
+    
+    <!-- Блок 1 — Обложка -->
+    <section class="hero" id="hero">
+        <div class="glass-card">
+            <div class="hero-content">
+                <h1 class="hero-names">Никита & Анна</h1>
+                
+                <div class="hero-photos">
+                    <div class="photo-wrapper photo-left">
+                        <img src="./img/Nikita.jpg" alt="Фото пары">
+                    </div>
+                    <div class="photo-wrapper photo-right">
+                        <img src="./img/Anna.jpg" alt="Фото пары">
+                    </div>
+                </div>
+                
+                <p class="hero-invitation">
+                    Приглашаем вас разделить с нами<br>
+                    самый важный и счастливый день нашей жизни
+                </p>
+                <p class="hero-date">13 августа 2026</p>
+                
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Блок 2 — Обращение -->
+    <section class="section greeting" id="greeting">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Дорогие родные и близкие!</h2>
+                <div class="section-photo">
+                    <img src="./img/anna__nikita.jpg" alt="Свадебное фото">
+                </div>
+                <div class="divider"></div>
+                <p class="section-text">
+                    Мы счастливы пригласить вас на наш свадебный вечер.<br>
+                    Для нас этот день станет началом новой главы,<br>
+                    и нам очень хочется разделить его<br>
+                    с самыми любимыми и важными людьми.
+                </p>
+                <p class="section-text">
+                    Будем рады, если вы проведёте этот вечер вместе с нами,<br>
+                    наполните его теплом, улыбками и счастливыми моментами.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 3 — Дата и место -->
+    <section class="section date-place" id="date-place">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Дата и место</h2>
+                <div class="divider"></div>
+                <div class="columns">
+                    <div class="column">
+                        <span class="column-label">Когда</span>
+                        <p class="column-value">13 августа 2026</p>
+                    </div>
+                    <div class="column-divider"></div>
+                    <div class="column">
+                        <span class="column-label">Где</span>
+                        <p class="column-value">«Кассэ Де Густо»</p>
+                        <p class="column-address">Малая Юшуньская улица, 1 к2</p>
+                    </div>
+                </div>
+                <a href="https://yandex.ru/maps/213/moscow/?filter=alternate_vertical%3ARequestWindow&ll=37.593988%2C55.653419&mode=search&poi%5Bpoint%5D=37.593224%2C55.653428&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D236147874291&sctx=ZAAAAAgBEAAaKAoSCZ5eKcsQz0JAEdOgaB7A4EtAEhIJA137Anqh8j8RmPxP%2Fu4d7D8iBgABAgMEBSgKOABA7q0HSAFiOnJlYXJyPXNjaGVtZV9Mb2NhbC9HZW91cHBlci9BZHZlcnRzL0N1c3RvbU1heGFkdi9FbmFibGVkPTFiOnJlYXJyPXNjaGVtZV9Mb2NhbC9HZW91cHBlci9BZHZlcnRzL0N1c3RvbU1heGFkdi9NYXhhZHY9MTViRHJlYXJyPXNjaGVtZV9Mb2NhbC9HZW91cHBlci9BZHZlcnRzL0N1c3RvbU1heGFkdi9SZWdpb25JZHM9WzEsMTAxNzRdYkByZWFycj1zY2hlbWVfTG9jYWwvR2VvdXBwZXIvQWR2ZXJ0cy9NYXhhZHZUb3BNaXgvTWF4YWR2Rm9yTWl4PTEwagJydZ0BzczMPaABAKgBAL0B9ydWl8IBBYOrpY8HggJC0LPQvtGB0YLQuNC90LjRhtCwINCR0LXRgNC70LjQvSDQnNCw0LvQsNGPINCu0YjRg9C90YzRgdC60LDRjyAx0LoyigIAkgIDMTc3mgIMZGVza3RvcC1tYXBz&sll=37.593988%2C55.653419&sspn=0.005058%2C0.001701&text=%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0%20%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD%20%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F%20%D0%AE%D1%88%D1%83%D0%BD%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%201%D0%BA2&z=18.56" target="_blank" class="btn btn-outline">Открыть на карте</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 4 — Тайминг -->
+    <section class="section timing" id="timing">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Программа вечера</h2>
+                <div class="divider"></div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">19:00</span>
+                        <span class="timeline-event">сбор гостей</span>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">23:00</span>
+                        <span class="timeline-event">окончание банкета</span>
+                    </div>
+                </div>
+                <p class="section-text timing-note">
+                    Будем рады видеть вас вовремя,<br>
+                    чтобы вместе начать этот вечер<br>
+                    в тёплой и праздничной атмосфере.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Блок 6 — Дресс-код -->
+    <section class="section dresscode" id="dresscode">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Дресс-код</h2>
+                <div class="divider"></div>
+                <p class="section-text">
+                    Нам будет очень приятно,<br>
+                    если вы поддержите атмосферу праздника<br>
+                    и выберете вечерние образы.
+                </p>
+                <p class="section-text dresscode-note">
+                    Мы будем рады видеть вас красивыми и счастливыми! <br> Очень просим лишь об одном — оставить белый цвет в этот день исключительно для невесты.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 7 — Пожелания -->
+    <section class="section wishes" id="wishes">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Пожелания</h2>
+                <div class="divider"></div>
+                <p class="section-text">
+                Мы не составляли список подарков, поэтому будем очень рады, если вы поможете нам осуществить наши мечты, подарив свои поздравления в конверте.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 8 — RSVP -->
+    <section class="section rsvp" id="rsvp">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Подтвердите присутствие</h2>
+                <div class="divider"></div>
+                <p class="section-text">
+                    Пожалуйста, сообщите нам,<br>
+                    сможете ли вы присутствовать на нашем празднике.<br>
+                    Будем благодарны за ваш ответ заранее,<br>
+                    чтобы мы могли с любовью подготовить этот вечер.
+                </p>
+                <a href="#rsvp-form" class="btn btn-primary">Заполнить анкету</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 9 — Форма RSVP -->
+    <section class="section rsvp-form" id="rsvp-form">
+        <div class="container">
+            <div class="glass-card">
+                <h2 class="section-title">Подтверждение присутствия</h2>
+                <div class="divider"></div>
+                <form class="form" id="weddingForm">
+                    <div class="form-group">
+                        <label for="name">Имя и фамилия</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя и фамилию">
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Сможете ли вы присутствовать?</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Выберите вариант</option>
+                            <option value="yes">Да, с радостью приду</option>
+                            <option value="no">К сожалению, не смогу</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companion">Будете ли вы с сопровождающим?</label>
+                        <select id="companion" name="companion">
+                            <option value="">Выберите вариант</option>
+                            <option value="no">Нет, буду один/одна</option>
+                            <option value="yes">Да, буду с сопровождающим</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="food">Есть ли у вас особенности по еде или ограничения и предпочтение к алкоголю?</label>
+                        <textarea id="food" name="food" rows="3" placeholder="Например: аллергия, вегетарианское меню и т.д."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Отправить</button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">✓</div>
+                    <p class="success-message">
+                        Спасибо за ваш ответ.<br>
+                        Мы с нетерпением ждём встречи с вами<br>
+                        в этот особенный день.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 10 — Финал -->
+    <section class="section final" id="final">
+        <div class="container">
+            <div class="glass-card glass-card-final">
+                <p class="final-text">
+                    С нетерпением ждём встречи с вами<br>
+                    на нашем свадебном вечере
+                </p>
+                <h2 class="final-names">Никита & Анна</h2>
+                <p class="final-date">13 августа 2026</p>
+                <p class="final-note">С любовью и радостью ждём вас</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Никита & Анна</p>
+    </footer>
+
+    </div>
+    <!-- Конец мобильного контента -->
+
+    <script src="script.js"></script>
+</body>
+</html>

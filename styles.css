@@ -1,0 +1,884 @@
+/* ===================================
+   Сброс и базовые стили
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ===================================
+   Фоновое изображение
+   =================================== */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 158%;
+    height: 100%;
+    /* Романтическое свадебное фото с цветами */
+    background-image: url(./img/sem.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.bg-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+   Типографика
+   =================================== */
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+}
+
+/* ===================================
+   Контейнер
+   =================================== */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===================================
+   Glass Card Effect
+   =================================== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-final {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===================================
+   Секции
+   =================================== */
+.section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 240px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    margin: 0 auto 30px;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+/* ===================================
+   Фото в секциях
+   =================================== */
+.section-photo {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-photo img {
+    width: 111%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.section-photo:hover img {
+    transform: scale(1.03);
+}
+
+/* ===================================
+   Кнопки
+   =================================== */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-primary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-full {
+    width: 100%;
+    max-width: 280px;
+}
+
+/* ===================================
+   Блок 1 — Обложка
+   =================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+}
+
+.hero .glass-card {
+    padding: 50px 25px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+/* ===================================
+   Фотографии на обложке
+   =================================== */
+.hero-photos {
+    position: relative;
+    height: 340px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-wrapper {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* Левое фото - наклон влево */
+.photo-left {
+    left: 50%;
+    transform: translateX(-120%) rotate(-8deg);
+    animation: floatLeft 3s ease-in-out infinite;
+}
+
+/* Правое фото - наклон вправо */
+.photo-right {
+    left: 50%;
+    transform: translateX(20%) rotate(10deg);
+    animation: floatRight 3s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+
+    0%,
+    100% {
+        transform: translateX(-120%) rotate(-8deg) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-120%) rotate(-8deg) translateY(-8px);
+    }
+}
+
+@keyframes floatRight {
+
+    0%,
+    100% {
+        transform: translateX(20%) rotate(10deg) translateY(0);
+    }
+
+    50% {
+        transform: translateX(20%) rotate(10deg) translateY(-8px);
+    }
+}
+
+.hero .glass-card {
+    padding: 50px 25px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero-invitation {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 18px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    position: relative;
+}
+
+.scroll-indicator span::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+/* ===================================
+   Блок 3 — Дата и место (колонки)
+   =================================== */
+.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.column {
+    width: 100%;
+}
+
+.column-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.column-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.column-address {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+}
+
+.column-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+/* ===================================
+   Блок 4 — Тайминг
+   =================================== */
+.timeline {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto 30px;
+    padding: 15px 0;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.timeline-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    min-width: 70px;
+    text-align: left;
+}
+
+.timeline-event {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    flex: 1;
+    text-align: right;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.timing-note {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===================================
+   Блок 5 — Локация
+   =================================== */
+.location-address {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 25px 0 30px;
+}
+
+.address-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===================================
+   Блок 6 — Дресс-код
+   =================================== */
+.dresscode-note {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+}
+
+/* ===================================
+   Блок 9 — Форма
+   =================================== */
+.form {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.7)' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.form-group select option {
+    background: #2c2c2c;
+    color: #fff;
+}
+
+.form-success {
+    display: none;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.form-success.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 70px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.success-message {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+/* ===================================
+   Блок 10 — Финал
+   =================================== */
+.final-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.final-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.final-date {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.final-note {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    padding: 25px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.footer p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===================================
+   Анимации
+   =================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(15px);
+    }
+}
+
+/* ===================================
+   Адаптивность (мобильные и планшеты)
+   =================================== */
+.desktop-message {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .glass-card {
+        padding: 35px 25px;
+        border-radius: 18px;
+    }
+
+    .hero .glass-card {
+        padding: 45px 25px;
+        max-width: 500px;
+    }
+
+    .hero-names {
+        font-size: 2.8rem;
+    }
+
+    .hero-photos {
+        height: 320px;
+    }
+
+    .photo-wrapper {
+        width: 170px;
+        height: 220px;
+    }
+
+    .photo-left {
+        transform: translateX(-110%) rotate(-8deg);
+    }
+
+    .photo-right {
+        transform: translateX(10%) rotate(10deg);
+    }
+
+    .hero-invitation {
+        font-size: 1rem;
+    }
+
+    .hero-date {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 600px;
+        padding: 0 20px;
+    }
+
+    .section-photo {
+        max-width: 320px;
+    }
+
+    .column-value {
+        font-size: 1.3rem;
+    }
+
+    .timeline-time {
+        font-size: 1.4rem;
+    }
+
+    .timeline-event {
+        font-size: 1rem;
+    }
+
+    .final-names {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 13px 32px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .hero .glass-card {
+        padding: 40px 20px;
+    }
+
+    .hero-names {
+        font-size: 2.3rem;
+    }
+
+    .hero-photos {
+        height: 260px;
+    }
+
+    .photo-wrapper {
+        width: 140px;
+        height: 180px;
+    }
+
+    .photo-left {
+        transform: translateX(-100%) rotate(-6deg);
+    }
+
+    .photo-right {
+        transform: translateX(0%) rotate(8deg);
+    }
+
+    .hero-invitation {
+        font-size: 0.9rem;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .column-value {
+        font-size: 1.2rem;
+    }
+
+    .section-photo {
+        max-width: 280px;
+    }
+
+    .timeline-time {
+        font-size: 1.3rem;
+    }
+
+    .timeline-event {
+        font-size: 0.9rem;
+    }
+
+    .final-names {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===================================
+   Десктоп (большие экраны)
+   =================================== */
+@media (min-width: 1025px) {
+    body {
+        overflow: hidden;
+    }
+
+    .desktop-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+        z-index: 1000;
+    }
+
+    .desktop-message-content {
+        text-align: center;
+        padding: 40px;
+        max-width: 500px;
+    }
+
+    .desktop-message-content h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 4rem;
+        color: #fff;
+        margin-bottom: 30px;
+        letter-spacing: 3px;
+    }
+
+    .desktop-message-content p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 10px;
+    }
+
+    .desktop-subtitle {
+        font-size: 1rem !important;
+        color: rgba(255, 255, 255, 0.5) !important;
+        font-style: italic;
+    }
+
+    .mobile-content {
+        display: none !important;
+    }
+}
